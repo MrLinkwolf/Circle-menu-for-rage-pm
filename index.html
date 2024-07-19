@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Circular Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="circle-menu">
+        <svg class="circle-svg" width="500" height="500" viewBox="0 0 500 500">
+            <circle cx="250" cy="250" r="250" fill="rgba(139, 139, 139, 0.0)" />
+            <g id="sectors"></g>
+            <circle cx="250" cy="250" r="100" fill="#f6f6f6" class="center" />
+            <text id="title-text" x="250" y="230" text-anchor="middle" font-size="24" fill="#000">123</text>
+            <text id="description-text" x="250" y="270" text-anchor="middle" font-size="14" fill="#000">321</text>
+        </svg>
+        <div id="icons"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

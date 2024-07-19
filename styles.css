@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('img.png');
+    font-family: Arial, sans-serif;
+    background-size: cover;
+}
+
+.circle-menu {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.center {
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: rgb(70, 70, 70);
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 1);
+    pointer-events: auto;
+    z-index: 2;
+    animation: expandCenter 0.5s forwards;
+    opacity: 0;
+}
+
+@keyframes expandCenter {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+.center h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #000;
+}
+
+.center p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #000;
+}
+
+.circle-svg path {
+    fill: rgba(21, 23, 47, 0.6);
+    stroke: rgba(21, 23, 47, 0.2);
+    opacity: 0;
+}
+
+.sector.active {
+    fill: rgba(112, 123, 251, 1);
+    stroke: rgba(0, 0, 0, 0);
+    filter: url(#glass-effect);
+    opacity: 1;
+}
+
+#icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.icon {
+    position: absolute;
+    font-size: 24px;
+    color: #fff;
+    pointer-events: auto;
+    transition: color 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    z-index: 1;
+}
